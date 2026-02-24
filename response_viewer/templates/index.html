@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Response Viewer</title>
+    <style>
+__INLINE_CSS__
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Dataset Response Viewer</h1>
+      <div class="filters">
+        <label for="filterSelect">Show:</label>
+        <select id="filterSelect">
+          <option value="all">All</option>
+          <option value="correct">Correct</option>
+          <option value="incorrect">Incorrect</option>
+        </select>
+        <span id="summary"></span>
+      </div>
+    </header>
+
+    <main>
+      <section id="matrixPanel" class="matrix-panel">
+        <h2>Confusion Matrix</h2>
+        <div id="matrix"></div>
+      </section>
+      <div id="cards" class="cards"></div>
+    </main>
+
+    <script id="seedData" type="application/json">__DATA_JSON__</script>
+    <script>
+__INLINE_JS__
+    </script>
+  </body>
+</html>

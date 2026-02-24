@@ -1,0 +1,4 @@
+*.pyc
+.word_list_cache.txt
+apikey.txt
+response_cache

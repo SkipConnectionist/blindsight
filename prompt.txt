@@ -1,0 +1,1 @@
+Do the two plotted curves intersect in the image? Only respond with Yes or No. Do not output anything else.
