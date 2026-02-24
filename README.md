@@ -3,11 +3,11 @@
 ## Blindness test generators
 
 - These scripts generate the various test inputs mentioned in the report
-- Most of these have minimal requirements: numpy and matplotlib should be sufficient to run these
+- Most of these have minimal requirements (`numpy` and `matplotlib` should typically be sufficient)
 
 ## Generating intersection datasets
 
-- Run the `generate_intersection_dataset.py` with an output directory and the number of images:
+- Run [generate_intersection_dataset.py](generate_intersection_dataset.py) with an output directory and the number of images:
 
 Example:
 
@@ -17,10 +17,10 @@ python generate_intersection_dataset.py --output_dir ~/data/AntIntersect/test/ -
 
 ## Computing accuracy metrics
 
-- Use the `compute_accuracy.py` script in conjuction with synthetic dataset to compute the LLMs accuracy.
+- Use the [compute_accuracy.py](compute_accuracy.py) script in conjuction with synthetic dataset to compute the LLMs accuracy.
 - By default, uses Claude Haiku 4.5 (expects an apikey to be present in `apikey.txt`)
 - Invoke with --use-local to fetch and use Phi 3.5 Vision Instruct instead
-- By default, reads the prompt from `prompt.txt`
+- By default, reads the prompt from [prompt.txt](prompt.txt)
 - Caches the results in `<cwd>/response_cache` (scoped by dataset name, model name, prompt hash).
 
 Example:
@@ -31,7 +31,7 @@ python compute_accuracy.py --input-dir ~/data/AntIntersect/test_without_grid/ --
 
 ## Viewing the results
 
-- Use the web-based viewer in `response_viewer` to visually explore the LLM results
+- Use the web-based viewer in [response_viewer](response_viewer) to visually explore the LLM results
 - Pass in the `response_cache` output sub-directory (created by `compute_accuracy.py`) and the corresponding images directory.
 
 Example:
@@ -42,7 +42,7 @@ python app.py --response-cache ../response_cache/test/claude-haiku-4-5-20251001/
 
 ## Phi 3.5 Vision Instruct: Linear Probe
 
-- `cd train`
+- Switch to the [train](train) sub-dir
 
 ### Step 1: Extract vision features
 
